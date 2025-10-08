@@ -1,14 +1,1 @@
-[Open.html](https://github.com/user-attachments/files/22756510/Open.html)
-<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    
-    <meta http-equiv="REFRESH" content="0; url=Data/index.html" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
