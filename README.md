@@ -13,8 +13,11 @@ See the project render at https://sarveshpatil7.github.io/Self-Balancing_Prism/
 | **ESP32-S3 DevKitC** | Central controller handling sensor fusion, PID control, and BLE telemetry |
 | **MPU6050 IMU** | Provides real-time accelerometer and gyroscope data |
 | **MT6701 Magnetic Encoder** | Measures precise angular position of the reaction wheel |
-| **BLDC Motor + SimpleFOC Driver** | Executes field-oriented control (FOC) for torque generation |
+| **BLDC Motor + DRV 8313 based SimpleFOC mini Driver** | Executes field-oriented control (FOC) for torque generation |
 | **3D-Printed Enclosure** | Lightweight structure optimized using **topology optimization** in Abaqus to reduce mass while maintaining stiffness |
+| **21700 battery pack** | 7.4V power supply |
+| **MP1584EN** | DC-DC Buck converter for 5V supply to the ESP32 |
+| **MT3608** | DC-DC Boost converter for 12V supply to the motor driver |
 
 ---
 
