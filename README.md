@@ -6,7 +6,7 @@ See the project render at https://sarveshpatil7.github.io/Self-Balancing_Prism/
 
 ---
 
-# System Architecture
+### System Architecture
 
 | Component | Function |
 |------------|-----------|
@@ -18,7 +18,7 @@ See the project render at https://sarveshpatil7.github.io/Self-Balancing_Prism/
 
 ---
 
-## Future Improvements
+### Future Improvements
 - Integrate **BLE-based tuning interface** for PID parameters   
 - Install the topology optimized enclosure plates (not fabricated yet)
   
