@@ -1,7 +1,7 @@
 
 threeSixty = {
     init: function () {
-    this._vr = new AC.VR('viewer', 'images/Frame######.png', [30, 9], {
+    this._vr = new AC.VR('viewer', 'images/Frame######.png', [30, 15], {
             invert: false
         });
     },
