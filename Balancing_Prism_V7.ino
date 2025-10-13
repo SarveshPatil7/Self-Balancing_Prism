@@ -33,6 +33,7 @@ float omega;
 unsigned long current_time;
 unsigned long last_time = 0;
 
+// angles corrosponding to the 3 stable and 3 unstable equillibrium positions
 float base_12 = -57;
 float base_23 = -179;
 float base_31 = 57.2;
@@ -41,7 +42,7 @@ float bal_2 = -118.2;
 float bal_3 = 120.8;
 
 // Variables for PID
-float P_gain = 3, I_gain = 0, D_gain = 0;
+float P_gain = 0, I_gain = 0, D_gain = 0;
 float balancing_point = 0;
 float last_error = 0;
 float error = 0;
@@ -55,9 +56,9 @@ void read_MPU(void* pvParameters) {
 
   for (;;) {
   Wire.beginTransmission(MPU6050_ADDRESS);
-  Wire.write(0x3B);  // Start at register 0x3B (Accel X)
+  Wire.write(0x3B);                              // Start at register 0x3B (Accel X)
   Wire.endTransmission(false);
-  Wire.requestFrom(MPU6050_ADDRESS, 14, true);  // Read 14 bytes
+  Wire.requestFrom(MPU6050_ADDRESS, 14, true);   // Read 14 bytes
 
   AcX = Wire.read() << 8 | Wire.read();
   AcY = Wire.read() << 8 | Wire.read();
@@ -66,7 +67,7 @@ void read_MPU(void* pvParameters) {
   GyY = Wire.read() << 8 | Wire.read();
   GyZ = Wire.read() << 8 | Wire.read();
 
-  // Protect shared variable
+  // shared variable
   portENTER_CRITICAL(&mux);
   ax = AcX;
   ay = AcY;
@@ -78,7 +79,7 @@ void read_MPU(void* pvParameters) {
 
 void focLoop(void* pvParameters) {
   for (;;) {
-    // Safely read shared velocity
+    // read shared velocity
     portENTER_CRITICAL(&mux);
     Ax = ax;
     Ay = ay;
@@ -119,7 +120,6 @@ void focLoop(void* pvParameters) {
       last_error = error;
 
       target_velocity = (P_gain * error) + (I_gain * integral) + (D_gain * derivative);
-      //target_velocity = constrain(target_velocity, -50, 50);
 
       motor.loopFOC();
       motor.move(target_velocity);
@@ -141,12 +141,12 @@ void setup() {
 
   // Set accelerometer full-scale range to ±2g
   Wire.beginTransmission(MPU6050_ADDRESS);
-  Wire.write(0x1C); // ACCEL_CONFIG register
-  Wire.write(0x00); // 0x00 = ±2g (AFS_SEL = 0)
+  Wire.write(0x1C);         // ACCEL_CONFIG register
+  Wire.write(0x00);         // 0x00 = ±2g (AFS_SEL = 0)
   Wire.endTransmission();
 
   //FOC setup
-  // initialise magnetic sensor hardware
+  // initialize magnetic sensor hardware
   sensor.init();
   // link the motor to the sensor
   motor.linkSensor(&sensor);
@@ -171,6 +171,7 @@ void setup() {
   motor.controller = MotionControlType::velocity;
   motor.useMonitoring(Serial);
   motor.init();
+  
   // align sensor and start FOC
   motor.initFOC();
 
