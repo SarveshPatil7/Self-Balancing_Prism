@@ -2,9 +2,11 @@
 
 An inverted-pendulum device that balances on its edges using a reaction-wheel. This project demonstrates the integration of control systems, embedded hardware, and mechanical design optimization into one self-stabilizing system.
 
+## Watch the video
+
 [![Watch the video](https://img.youtube.com/vi/W3pju5vKch4/0.jpg)](https://www.youtube.com/watch?v=W3pju5vKch4)
 
-See the project render at https://sarveshpatil7.github.io/Self-Balancing_Prism/
+## See the project render at https://sarveshpatil7.github.io/Self-Balancing_Prism/
 
 ---
 
