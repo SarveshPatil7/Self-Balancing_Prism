@@ -21,8 +21,18 @@ See the project render at https://sarveshpatil7.github.io/Self-Balancing_Prism/
 
 ---
 
+### Control Flow  
+
+1. **Sensor Task** — A FreeRTOS task reads the IMU and stores shared variables.  
+2. **Control Task** — Runs at ~1 kHz, computes filtered angle (`tri_angle`), PID output, observer term, and commands motor torque.  
+3. **Calibration** — Computes gyro bias and initial tilt before engaging control.  
+4. **Safety & Windup Handling** — Monitors excessive tilt and resets integral term.  
+
+---
+
 ### Future Improvements
-- Integrate **BLE-based tuning interface** for PID parameters   
+- Integrate **BLE-based tuning interface** for control parameters    
 - Install the topology optimized enclosure plates (not fabricated yet)
+- State machine for stand‑up / fall‑recovery / locomotion modes
   
 ---
