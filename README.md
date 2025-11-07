@@ -6,7 +6,9 @@ An inverted-pendulum device that balances on its edges using a reaction-wheel. T
 
 [![Watch the video](https://img.youtube.com/vi/W3pju5vKch4/0.jpg)](https://www.youtube.com/watch?v=W3pju5vKch4)
 
-## See the project render at https://sarveshpatil7.github.io/Self-Balancing_Prism/
+## Check out the project render     
+
+[![View Render](https://github.com/SarveshPatil7/Self-Balancing_Prism/blob/main/docs/images/Frame000373.png)](https://sarveshpatil7.github.io/Self-Balancing_Prism/)
 
 ---
 
