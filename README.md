@@ -14,7 +14,8 @@ An inverted-pendulum device that balances on its edges using a reaction-wheel. T
 
 ### Assembly Procedure
 
-[![Watch the video](https://img.youtube.com/vi/uf6nLatY1kM/0.jpg)](https://youtube.com/shorts/uf6nLatY1kM)
+[![Watch the video](Exploded_View.PNG)](https://youtube.com/shorts/uf6nLatY1kM)
+
 ---
 
 ### System Architecture
