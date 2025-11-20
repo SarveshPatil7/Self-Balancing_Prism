@@ -101,7 +101,7 @@ void focLoop(void* pvParameters) {
     portENTER_CRITICAL(&mux);
     ax = Ax;
     ay = Ay;
-    gz = -Gz;     //reversed reading
+    gz = -Gz;     //direction correction
     portEXIT_CRITICAL(&mux);
 
     sensor.update();
