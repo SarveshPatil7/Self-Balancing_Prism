@@ -12,6 +12,9 @@ An inverted-pendulum device that balances on its edges using a reaction-wheel. T
   <img src="https://github.com/SarveshPatil7/Self-Balancing_Prism/blob/main/docs/images/Frame000373.png?raw=true" alt="View Render" width="500"/>
 </a>
 
+### Assembly Procedure
+
+[![Watch the video](https://img.youtube.com/vi/uf6nLatY1kM/0.jpg)](https://youtube.com/shorts/uf6nLatY1kM)
 ---
 
 ### System Architecture
